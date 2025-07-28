@@ -2,7 +2,8 @@
 
 ## Introduction
 
-The Shelter Data Mangement template can be used in hosting and rental programs.
+The **Shelter Data Mangement template** can be used in hosting and rental programs.
+
 It should be used together with the [People Affected Management (PAM)](https://github.com/rodekruis/espocrm-template-pam/tree/main) template.
 
 #### Why Shelter template?
