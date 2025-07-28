@@ -2,9 +2,9 @@
 
 ## Introduction
 
-The **Shelter Data Mangement template** can be used in hosting and rental programs.
+The **Shelter Data Mangement template** is a data management solution based on EspoCRM for humanitarian organizations to manage their data in hosting and rental programs.
 
-It should be used together with the [People Affected Management (PAM)](https://github.com/rodekruis/espocrm-template-pam/tree/main) template.
+This template should be used together with the [People Affected Management (PAM)](https://github.com/rodekruis/espocrm-template-pam/tree/main) template.
 
 #### Why Shelter template?
 Management of information is a critical aspect within a shelter program. It is essential to have a system that is **secure**, **easy to use**, **fast to set up**, and **customizable** to the needs of your organization. The shelter template is designed to meet these requirements. It offers:
