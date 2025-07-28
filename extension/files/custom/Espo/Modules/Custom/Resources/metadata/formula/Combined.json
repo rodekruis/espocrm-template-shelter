@@ -1,0 +1,3 @@
+{
+    "beforeSaveCustomScript": "// Add name to Match, based on affected household and accommodation\nname = string\\concatenate(affectedHousehold.hhID, ' - ', accommodation.acID);"
+}

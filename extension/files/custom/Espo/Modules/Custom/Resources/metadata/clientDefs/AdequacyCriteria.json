@@ -1,0 +1,14 @@
+{
+    "controller": "controllers/record",
+    "boolFilterList": [
+        "onlyMy"
+    ],
+    "iconClass": "fas fa-house-damage",
+    "relationshipPanels": {
+        "accommodation": {
+            "layout": null
+        }
+    },
+    "kanbanViewMode": false,
+    "color": null
+}

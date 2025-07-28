@@ -1,0 +1,23 @@
+[
+    {
+        "name": "name",
+        "link": true,
+        "label": "Name"
+    },
+    {
+        "name": "country",
+        "label": "Country"
+    },
+    {
+        "name": "type",
+        "label": "Type"
+    },
+    {
+        "name": "createdAt",
+        "label": "Created At"
+    },
+    {
+        "name": "status",
+        "label": "Status"
+    }
+]

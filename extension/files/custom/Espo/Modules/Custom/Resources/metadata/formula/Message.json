@@ -1,0 +1,3 @@
+{
+    "beforeSaveCustomScript": "// Add name to message record\nifThenElse(messageTemplate.name, $name = messageTemplate.name, $name = \"Custom message\");\nname = string\\concatenate($name, \" - \", to, \" - \", sid);"
+}

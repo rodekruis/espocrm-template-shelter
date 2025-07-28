@@ -1,0 +1,12 @@
+{
+    "_delimiter_": {
+        "disabled": true
+    },
+    "transfers": {
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "dynamicLogicStyled": null,
+        "sticked": false,
+        "index": 0
+    }
+}

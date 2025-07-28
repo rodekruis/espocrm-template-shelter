@@ -1,0 +1,67 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "country"
+                },
+                {
+                    "name": "type"
+                },
+                false
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "dynamicLogicStyled": null,
+        "tabBreak": false,
+        "hidden": false,
+        "customLabel": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "note"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "danger",
+        "dynamicLogicStyled": null,
+        "tabBreak": false,
+        "hidden": false,
+        "customLabel": "IMPORTANT"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "bodyEN"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": false,
+        "hidden": false,
+        "customLabel": "English"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "bodyHU"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": false,
+        "hidden": false,
+        "customLabel": "Hungarian"
+    }
+]

@@ -1,0 +1,14 @@
+{
+    "controller": "controllers/record",
+    "boolFilterList": [
+        "onlyMy"
+    ],
+    "iconClass": "fas fa-piggy-bank",
+    "relationshipPanels": {
+        "combineds": {
+            "layout": null
+        }
+    },
+    "kanbanViewMode": false,
+    "color": null
+}

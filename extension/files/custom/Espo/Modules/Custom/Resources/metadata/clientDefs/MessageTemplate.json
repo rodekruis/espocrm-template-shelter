@@ -1,0 +1,101 @@
+{
+    "controller": "controllers/record",
+    "boolFilterList": [
+        "onlyMy"
+    ],
+    "iconClass": "fas fa-envelope",
+    "dynamicLogic": {
+        "fields": {
+            "sid": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "status",
+                            "value": "pending whatsapp"
+                        }
+                    ]
+                }
+            },
+            "bodyEN": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "notEquals",
+                            "attribute": "status",
+                            "value": "new"
+                        }
+                    ]
+                }
+            },
+            "bodyRU": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "notEquals",
+                            "attribute": "status",
+                            "value": "new"
+                        }
+                    ]
+                }
+            },
+            "bodyFR": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "notEquals",
+                            "attribute": "status",
+                            "value": "new"
+                        }
+                    ]
+                }
+            },
+            "bodyAR": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "notEquals",
+                            "attribute": "status",
+                            "value": "new"
+                        }
+                    ]
+                }
+            },
+            "bodyZH": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "notEquals",
+                            "attribute": "status",
+                            "value": "new"
+                        }
+                    ]
+                }
+            },
+            "bodyES": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "notEquals",
+                            "attribute": "status",
+                            "value": "new"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "kanbanViewMode": false,
+    "color": null,
+    "relationshipPanels": {
+        "messages": {
+            "layout": null
+        },
+        "affectedHouseholds": {
+            "layout": null
+        },
+        "accommodations": {
+            "layout": null
+        }
+    }
+}

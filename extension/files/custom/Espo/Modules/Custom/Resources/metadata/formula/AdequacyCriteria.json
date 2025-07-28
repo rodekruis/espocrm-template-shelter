@@ -1,0 +1,3 @@
+{
+    "beforeSaveCustomScript": "// Give correct name to accommodation registration (Accommodation + ID)\nname = string\\concatenate(\"Adequacy form - \", accommodationID);"
+}

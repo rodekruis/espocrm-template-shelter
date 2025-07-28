@@ -1,0 +1,3 @@
+{
+    "beforeSaveCustomScript": "// Set standard number of transfers to 1 if one-off payment\nifThen(frequency == 'oneOff', numberOfTransfers = 1);"
+}

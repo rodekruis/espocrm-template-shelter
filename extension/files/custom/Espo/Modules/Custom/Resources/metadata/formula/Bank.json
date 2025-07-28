@@ -1,0 +1,3 @@
+{
+    "beforeSaveCustomScript": "// Give name to bank record\nname = bankName;"
+}

@@ -1,0 +1,33 @@
+[
+    {
+        "name": "name",
+        "link": true,
+        "label": "Name"
+    },
+    {
+        "name": "cPersonAffected",
+        "align": "left"
+    },
+    {
+        "name": "language"
+    },
+    {
+        "name": "messageTemplate"
+    },
+    {
+        "name": "to"
+    },
+    {
+        "name": "sent",
+        "label": "Sent"
+    },
+    {
+        "name": "status",
+        "label": "Status"
+    },
+    {
+        "name": "teams",
+        "notSortable": true,
+        "label": "Teams"
+    }
+]

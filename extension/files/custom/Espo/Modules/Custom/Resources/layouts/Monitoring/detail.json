@@ -1,0 +1,32 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "combined"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "date"
+                },
+                {
+                    "name": "meetingType"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "warning",
+        "dynamicLogicStyled": null,
+        "tabBreak": false,
+        "hidden": false,
+        "noteText": null,
+        "customLabel": "Overview"
+    }
+]

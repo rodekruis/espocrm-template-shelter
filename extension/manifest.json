@@ -1,10 +1,11 @@
 {
-  "name": "Espo CRM PAM Extension",
-  "version": "1.1.0",
-  "acceptableVersions": [
-     ">=9.0.0"
-  ],
-  "releaseDate": "2025-07-22",
-  "author": "jmargutti@redcross.nl",
-  "description": "People Affected Management (PAM): manage data of people affected by disasters and crises.",
+    "name": "Espo CRM Shelter Extension",
+    "version": "1.0.0",
+    "author": "sberendschot@redcross.nl",
+    "skipBackup": true,
+    "releaseDate": "2025-07-28",
+    "description": "Shelter Data Management: manage data for shelter (rental and hosting assistance) programs",
+    "acceptableVersions": [
+        ">=8.0.0"
+    ]
 }

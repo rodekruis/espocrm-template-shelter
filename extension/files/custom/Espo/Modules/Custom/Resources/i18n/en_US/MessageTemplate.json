@@ -1,0 +1,82 @@
+{
+    "fields": {
+        "bodyEN": "Body (EN)",
+        "bodyRU": "Body (RU)",
+        "connector": "Connector",
+        "country": "Country",
+        "messageCategory": "Message Category",
+        "note": "IMPORTANT!",
+        "sid": "Sid",
+        "status": "Status",
+        "type": "Type",
+        "messages": "Messages",
+        "affectedHouseholds": "Affected Households",
+        "accommodations": "Accommodations",
+        "bodyFR": "Body (FR)",
+        "bodyAR": "Body (AR)",
+        "bodyZH": "Body (ZH)",
+        "bodyES": "Body (ES)"
+    },
+    "links": {
+        "messages": "Messages",
+        "affectedHouseholds": "Affected Households",
+        "accommodations": "Accommodations"
+    },
+    "labels": {
+        "Create MessageTemplate": "Create Message Template"
+    },
+    "options": {
+        "country": {
+            "ukraine": "Ukraine",
+            "poland": "Poland",
+            "romania": "Romania",
+            "slovakia": "Slovakia",
+            "slovenia": "Slovenia",
+            "hungary": "Hungary",
+            "moldova": "Moldova",
+            "bulgaria": "Bulgaria",
+            "other": "Other",
+            "": "",
+            "generic": "Generic"
+        },
+        "messageCategory": {
+            "ACCOUNT_UPDATE": "Account Update",
+            "ALERT_UPDATE": "Alert Update",
+            "APPOINTMENT_UPDATE": "Appointment Update",
+            "AUTO_REPLY": "Auto Reply",
+            "ISSUE_RESOLUTION": "Issue Resolution",
+            "PAYMENT_UPDATE": "Payment Update",
+            "PERSONAL_FINANCE_UPDATE": "Personal Finance Update",
+            "RESERVATION_UPDATE": "Reservation Update",
+            "SHIPPING_UPDATE": "Shipping Update",
+            "TICKET_UPDATE": "Ticket Update",
+            "TRANSPORTATION_UPDATE": "Transportation Update"
+        },
+        "status": {
+            "new": "New",
+            "submitted": "Submitted",
+            "rejected internally": "Rejected internally",
+            "rejected whatsapp": "Rejected WhatsApp",
+            "approved internally": "Approved internally",
+            "approved whatsapp": "Approved WhatsApp",
+            "pending whatsapp": "Pending WhatsApp",
+            "discontinued": "Discontinued",
+            "deleted": "Deleted"
+        },
+        "type": {
+            "approval": "Approval",
+            "approval&payment": "Approval & payment",
+            "payment": "Payment",
+            "reminder": "Reminder",
+            "pdm": "PDM",
+            "survey": "Survey",
+            "rejection": "Rejection",
+            "other": "Other",
+            "": ""
+        }
+    },
+    "tooltips": {
+        "bodyEN": "Use double curly braces to indicate where you plan to use dynamic content. For example, to send \"Your login code for Twilio is 1234\", the template would be: \"Your login code for {{1}} is {{2}}.\"",
+        "bodyRU": "Use double curly braces to indicate where you plan to use dynamic content. For example, to send \"Your login code for Twilio is 1234\", the template would be: \"Your login code for {{1}} is {{2}}.\""
+    }
+}

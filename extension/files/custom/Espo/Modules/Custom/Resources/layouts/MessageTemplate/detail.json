@@ -1,0 +1,133 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "country"
+                },
+                {
+                    "name": "type"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "note"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "dynamicLogicStyled": null,
+        "tabBreak": false,
+        "hidden": false,
+        "noteText": null,
+        "customLabel": "IMPORTANT"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "bodyEN"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": false,
+        "tabLabel": null,
+        "hidden": false,
+        "customLabel": "English"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "bodyFR"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": false,
+        "tabLabel": null,
+        "hidden": false,
+        "noteText": null,
+        "customLabel": "French"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "bodyAR"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": false,
+        "tabLabel": null,
+        "hidden": false,
+        "noteText": null,
+        "customLabel": "Arabic"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "bodyZH"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": false,
+        "tabLabel": null,
+        "hidden": false,
+        "noteText": null,
+        "customLabel": "Chinese"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "bodyRU"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": false,
+        "tabLabel": null,
+        "hidden": false,
+        "noteText": null,
+        "customLabel": "Russian"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "bodyES"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": false,
+        "tabLabel": null,
+        "hidden": false,
+        "noteText": null,
+        "customLabel": "Spanish"
+    }
+]

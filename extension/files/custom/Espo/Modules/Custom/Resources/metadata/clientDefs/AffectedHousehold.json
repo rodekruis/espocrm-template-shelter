@@ -1,0 +1,104 @@
+{
+    "controller": "controllers/record",
+    "boolFilterList": [
+        "onlyMy"
+    ],
+    "iconClass": "fas fa-user",
+    "kanbanViewMode": false,
+    "color": null,
+    "dynamicLogic": {
+        "fields": {
+            "manualApproval": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "eligibilityStatus",
+                                    "value": "needsValidation"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "eligibilityStatus",
+                                    "value": "rejected"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "commentBoxEnglish": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "commentBox"
+                        }
+                    ]
+                }
+            },
+            "rejectManually": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "eligibilityStatus",
+                                    "value": "needsValidation"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "eligibilityStatus",
+                                    "value": "approved"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "idOther": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "idType",
+                            "value": "idOther"
+                        }
+                    ]
+                }
+            }
+        },
+        "options": {
+            "registrationStatus": null
+        }
+    },
+    "relationshipPanels": {
+        "combineds": {
+            "layout": null
+        },
+        "messages": {
+            "layout": null
+        },
+        "accommodations": {
+            "layout": null
+        },
+        "messageTemplate": {
+            "layout": null
+        },
+        "cPersonAffected": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        }
+    },
+    "filterList": [
+        "__APPEND__",
+        {
+            "isReportFilter": true,
+            "name": "reportFilter653fd7a94eabdb0ab"
+        }
+    ]
+}

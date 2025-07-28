@@ -1,0 +1,44 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "transferValue"
+                },
+                {
+                    "name": "iban"
+                }
+            ],
+            [
+                {
+                    "name": "status"
+                },
+                {
+                    "name": "transferTimeActual"
+                }
+            ],
+            [
+                {
+                    "name": "transferDate"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "combined"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "transferType"
+                },
+                {
+                    "name": "deliveryMechanism"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    }
+]

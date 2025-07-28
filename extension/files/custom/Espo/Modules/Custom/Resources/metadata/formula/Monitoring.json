@@ -1,0 +1,3 @@
+{
+    "beforeSaveCustomScript": "// Give name to monitoring record\nname = string\\concatenate(\"Monitoring - \", combined.name,' - ', date);"
+}
