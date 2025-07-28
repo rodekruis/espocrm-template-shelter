@@ -1,11 +1,12 @@
-# People Affected Management (PAM)
+# Shelter Data Management
 
 ## Introduction
 
-**People Affected Management (PAM)** is a data management solution based on EspoCRM for humanitarian organizations to manage the data of the people they serve.
+The Shelter Data Mangement template can be used in hosting and rental programs.
+It should be used together with the [People Affected Management (PAM)](https://github.com/rodekruis/espocrm-template-pam/tree/main) template.
 
-#### Why PAM?
-Management of people's personal information is a critical aspect of humanitarian work. It is essential to have a system that is **secure**, **easy to use**, **fast to set up**, and **customizable** to the needs of your organization. PAM is designed to meet these requirements. It offers:
+#### Why Shelter template?
+Management of information is a critical aspect within a shelter program. It is essential to have a system that is **secure**, **easy to use**, **fast to set up**, and **customizable** to the needs of your organization. The shelter template is designed to meet these requirements. It offers:
 * A simple yet effective **data model**, defining what data is stored in the system and how it is interlinked​
 * A set of **layouts** to easily manage this data​
 * Standard **user roles** to control access, down to individual records and fields​
@@ -18,22 +19,28 @@ Management of people's personal information is a critical aspect of humanitarian
 
 ## Description
 
-PAM consists of _Entities_ and _Roles_. 
-* Entities are data structures that hold information (about people, programs, etc.).
+Shelter template consists of _Entities_, _Roles_, _Reports_ and _Flowcharts_. 
+* Entities are data structures that hold information (about affected households, accommodations, etc.).
 * Roles are sets of permissions that define what each user can do in the system.
+* Reports are graphics that show (consilidated) information from the data in the system.
+* Flowcharts are processes that happen automatically, based on a certain trigger.
 
 #### Entities and their relationships:
-* **Person Affected (PA)**: a person affected by a disaster, e.g. a beneficiary of a program. Linked to HHs, programs, and tasks.
-* **Household (HH)**: a group of people living together, e.g. a family. Linked to one or more PAs.
-* **Program**: a project or activity, e.g. a cash distribution. Linked to one or more PAs.
-* **Task**: an action to be taken, e.g. a follow-up phone call, that can be assigned to a user, e.g. a volunteer. Linked to one or more PAs.
+* **Affected Household**: a group of people living together, affected by a disaster, e.g. the beneficiaries of a program. Linked to accommodations, a match, message template and messages. Also, it is linked to the Person Affected of the PAM template.
+* **Accommodation**: an accommodation to be used by an affected household. Linked to affected households, a match, an accomodation adequacy form, message template and messages. Also, it is linked to the Person Affected of the PAM template.
+* **Match**: a match between an affected household and an accommodation. Linked to an affected household, an accommodation, a bank, cash distribution, transfers and monitoring forms.
+* **Accommodation adequacy**: a form reviewing an accommodation, including adequacy criteria. Linked to an accommodation.
+* **Monitoring**: a monitoring form, to be used to follow up on a match. Linked to a match.
+* **Message templates**: a template of a message that can be send to affected households or accommodations. Linked to affected households, accommodations and messages.
+* **Messages**: a message that is sent to a specific person. Linked to an affected household or accommodation and to a message template.
+* **Cash distributions**: a "template" of a transfer that can be send to a certain match, containing information on the transfer date, type, value, frequency. Linked to a match and transfers.
+* **Transfers**: a transfer related to a specific person. Linked to a match and a cash distribution.
+* **Banks**: list of banks. Linked to matches.
 
 #### Roles:
-* **Volunteer**: registers PAs and HHs. Sees PAs and HHs of their team (e.g. a branch). Can be assigned tasks.
-* **Volunteer Manager**: registers PAs and HHs. Sees and edit all PAs and HHs of their team (e.g. a branch). Can create and assign tasks to volunteers in their team.
-* **Program Officer**: registers, sees, and edits all PAs and HHs. Can create and assign tasks.
-* **Program Manager**: registers, sees, and edits all PAs and HHs. Can create and assign tasks. Can create and edit programs.
-* **Movement Partner or Higher Management**: Sees all data except personally identifiable information (PII).
+* **Shelter Manager**: registers, sees and edits all information.
+* **Shelter Officer**: registers and sees affected households, accommodations and matches of their team.
+* **API Kobo**: registers affected households, accommodations and accommodation adequacy forms.
 
 ## Installation
 
@@ -41,7 +48,8 @@ PAM consists of _Entities_ and _Roles_.
 > Make sure to back up your EspoCRM instance before installing this extension.
 
 1. If not done already, [install EspoCRM](https://docs.espocrm.com/administration/installation/).
-2. Download the .zip file with the extension: [extension.zip](https://github.com/rodekruis/espocrm-template-pam/raw/refs/heads/main/extension.zip).
+2. Install [PAM](https://github.com/rodekruis/espocrm-template-pam/tree/main)
+3. Download the .zip file with the extension: [extension.zip](https://github.com/rodekruis/espocrm-template-shelter/raw/refs/heads/main/extension.zip).
 2. Install the extension
     * Log in EspoCRM as an administrator.
     * Go to `Administration` > `Extensions`.
@@ -53,12 +61,14 @@ PAM consists of _Entities_ and _Roles_.
  
 3. Make the entities visible in the `Navbar`:
     * Go to `Administration` > `User Interface`.
-    * Under `Navbar` > `Tab List`, add the entities `Persons Affected`, `Households`, `Programs`, and `Tasks`.
+    * Under `Navbar` > `Tab List`, add the entities `Affected Household`, `Accommodation`, `Match`, `Accommodation adequacy`, `Monitoring`, `Message templates`, `Messages`, `Cash distributions`, `Transfers` and `Banks`.
 4. For every file in the [import](/import) folder, import it in EspoCRM:
     * Go to `Administration` > `Import`.
     * Under `What to Import?` > `Entity Type`, select the entity corresponding to the file name; e.g. if the file name is `Roles.csv`, select `Roles`.
     * Click `Next`.
     * Click `Run Import`.
+5. Add the following relationships:
+    * XX
 
 > [!WARNING]  
 > If you already have records with the same names, the import will overwrite them.
@@ -69,5 +79,3 @@ PAM consists of _Entities_ and _Roles_.
 * It is provided as-is, without any warranty. Please ensure it works as intended before using it in a real humanitarian program.
 * It is meant to be used as a starting point for organizations to build their own data management system. It is recommended to customize it to the specific needs of your organization.
 * If you have any questions, please [contact us](https://www.510.global/contact/). We cannot guarantee support, but we will do our best to help you.
-
-
