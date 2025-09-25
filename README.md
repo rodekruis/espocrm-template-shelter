@@ -95,7 +95,8 @@ Shelter template consists of _Entities_, _Roles_, _Reports_ and _Flowcharts_.
             "cAccommodation": {
                "type": "hasMany",
                "foreign": "cPersonAffected",
-               "entity": "Accommodation"      
+               "entity": "Accommodation"
+            } 
          ```
       * Save the file - eg: `CTRL + O`, `Enter`, `CTRL + X`
       * Rebuild - eg: Go to Administration in the UI > Rebuild
