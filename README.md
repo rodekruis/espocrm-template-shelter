@@ -82,6 +82,7 @@ Shelter template consists of _Entities_, _Roles_, _Reports_ and _Flowcharts_.
       "type": "linkOne"
    }
 ```
+
       * Navigate to `links` and add:
 ```
     "cAffectedHousehold": {
