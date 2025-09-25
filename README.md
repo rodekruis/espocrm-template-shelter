@@ -77,12 +77,11 @@ Shelter template consists of _Entities_, _Roles_, _Reports_ and _Flowcharts_.
       * Navigate to the following location (eg. by SSH in the VM): `/var/www/espocrm/data/espocrm/custom/Espo/Modules/Custom/Resources/metadata/entityDefs`
       * Open the `CPersonAffected.json` file, with editing rights - eg: `sudo nano CPersonAffected.json`
       * Navigate to `fields` and add:
-```
-   "cAffectedHousehold": {
-      "type": "linkOne"
-   }
-```
-
+         ```
+            "cAffectedHousehold": {
+               "type": "linkOne"
+            }
+         ```
 
       * Navigate to `links` and add:
 
