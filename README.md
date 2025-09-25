@@ -73,7 +73,7 @@ Shelter template consists of _Entities_, _Roles_, _Reports_ and _Flowcharts_.
   
 ### Optional steps for installation, adding more functionalities
 7. Proper set up of relationships between Shelter and PAM
-    * With importing the Shelter extension, relationships to the Person Affected from the PAM extension are set up: both for Affected Household and Accommodation. The relationship is functioning, but is not completely set up properly, as in a "normal" relationship, it is also set up from the Person Affected side. For example, to be able to show the Affected Household and Accommodation as links in the Person Affected, the relationship also needs to be set up from the Person Affected side. This can be done as follows:
+    * With importing the Shelter extension, relationships to the Person Affected from the PAM extension are set up for the following entities: Affected Household, Accommodation and Message. The relationships are functioning, but is not set up completely properly; in a "normal" relationship within EspoCRM, it is also set up from the Person Affected side. For example, to be able to show the Affected Household, Accommodations and Messages as links in the Person Affected, the relationship also needs to be set up from the Person Affected side. This can be done as follows:
       * Navigate to the following location (eg. by SSH in the VM): `/var/www/espocrm/data/espocrm/custom/Espo/Modules/Custom/Resources/metadata/entityDefs`
       * Open the `CPersonAffected.json` file, with editing rights - eg: `sudo nano CPersonAffected.json`
       * Navigate to `fields` and add:
@@ -81,7 +81,10 @@ Shelter template consists of _Entities_, _Roles_, _Reports_ and _Flowcharts_.
             "cAffectedHousehold": {
                "type": "linkOne"
             },
-            "cAccommodation": {
+            "cAccommodations": {
+               "type": "linkMultiple"
+            },
+            "cMessages": {
                "type": "linkMultiple"
             }
          ```
@@ -92,11 +95,16 @@ Shelter template consists of _Entities_, _Roles_, _Reports_ and _Flowcharts_.
                "foreign": "cPersonAffected",
                "entity": "AffectedHousehold"
             },
-            "cAccommodation": {
+            "cAccommodations": {
                "type": "hasMany",
                "foreign": "cPersonAffected",
                "entity": "Accommodation"
-            } 
+            },
+            "cMessages": {
+               "type": "hasMany",
+               "foreign": "cPersonAffected",
+               "entity": "Message"
+            }
          ```
       * Save the file - eg: `CTRL + O`, `Enter`, `CTRL + X`
       * Rebuild - eg: Go to Administration in the UI > Rebuild
