@@ -117,6 +117,8 @@ Shelter template consists of _Entities_, _Roles_, _Reports_ and _Flowcharts_.
 9. Translation of comment boxes
     * There are two flowcharts to translate the comment boxes in the Affected Household and Accommodation entities. In order to make this work:
       * Add the URL in the two flowcharts that takes care of the translation of the comment box: Open the flocwcharts one by one, click on the task box and edit the part `ADD_URL`, where `ADD_URL` is the endpoint that takes care of the translation of the comment box.
+10. Create dashboards
+    * With this template, Reports can be imported to the instance. Possibility is to create dashboards based on these reports, for easy data overview and analysis.
 
 > [!WARNING]  
 > If you already have records with the same names, the import will overwrite them.
