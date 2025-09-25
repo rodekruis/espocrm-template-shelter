@@ -1,0 +1,20 @@
+{
+    "scopeNames": {
+        "Combined": "Match",
+        "AffectedHousehold": "Affected Household",
+        "AdequacyCriteria": "Accommodation adequacy",
+        "MessageTemplate": "Message template",
+        "CashDistribution": "Cash distribution"
+    },
+    "scopeNamesPlural": {
+        "Combined": "Matches",
+        "AffectedHousehold": "Affected Households",
+        "Accommodation": "Accommodations",
+        "AdequacyCriteria": "Accommodation adequacy",
+        "MessageTemplate": "Message templates",
+        "Message": "Messages",
+        "CashDistribution": "Cash distributions",
+        "Transfer": "Transfers",
+        "Bank": "Banks"
+    }
+}

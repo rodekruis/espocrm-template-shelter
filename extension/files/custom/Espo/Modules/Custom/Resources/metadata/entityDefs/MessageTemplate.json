@@ -43,14 +43,6 @@
             "displayRawText": true,
             "tooltip": false
         },
-        "bodyRU": {
-            "type": "text",
-            "rowsMin": 2,
-            "cutHeight": 200,
-            "audited": true,
-            "displayRawText": true,
-            "tooltip": false
-        },
         "connector": {
             "type": "varchar",
             "maxLength": 150,
@@ -62,27 +54,15 @@
             "type": "enum",
             "options": [
                 "generic",
-                "ukraine",
-                "poland",
-                "romania",
-                "slovakia",
-                "slovenia",
-                "hungary",
-                "moldova",
-                "bulgaria",
+                "ch",
+                "nl",
                 "other",
                 ""
             ],
             "style": {
                 "generic": null,
-                "ukraine": null,
-                "poland": null,
-                "romania": null,
-                "slovakia": null,
-                "slovenia": null,
-                "hungary": null,
-                "moldova": null,
-                "bulgaria": null,
+                "ch": null,
+                "nl": null,
                 "other": null,
                 "": null
             },

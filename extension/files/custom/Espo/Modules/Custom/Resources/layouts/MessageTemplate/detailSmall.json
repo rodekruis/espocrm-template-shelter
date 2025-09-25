@@ -49,19 +49,5 @@
         "tabBreak": false,
         "hidden": false,
         "customLabel": "English"
-    },
-    {
-        "rows": [
-            [
-                {
-                    "name": "bodyHU"
-                }
-            ]
-        ],
-        "dynamicLogicVisible": null,
-        "style": "default",
-        "tabBreak": false,
-        "hidden": false,
-        "customLabel": "Hungarian"
     }
 ]
