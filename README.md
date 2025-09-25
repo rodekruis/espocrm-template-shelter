@@ -48,10 +48,12 @@ Shelter template consists of _Entities_, _Roles_, _Reports_ and _Flowcharts_.
 > [!IMPORTANT]  
 > Make sure to back up your EspoCRM instance before installing this extension.
 
+> In order to make use of the full functionalities of this extension (automatic processes with flowcharts and reports), the [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) of EspoCRM is needed.
+
 1. If not done already, [install EspoCRM](https://docs.espocrm.com/administration/installation/).
 2. Install [PAM](https://github.com/rodekruis/espocrm-template-pam/tree/main)
 3. Download the .zip file with the extension: [extension.zip](https://github.com/rodekruis/espocrm-template-shelter/raw/refs/heads/main/extension.zip).
-2. Install the extension
+4. Install the extension
     * Log in EspoCRM as an administrator.
     * Go to `Administration` > `Extensions`.
     * Select the .zip file with the extension.
@@ -60,16 +62,61 @@ Shelter template consists of _Entities_, _Roles_, _Reports_ and _Flowcharts_.
 > [!WARNING]  
 > If you already have entities with the same names, the installation will overwrite them.
  
-3. Make the entities visible in the `Navbar`:
+5. Make the entities visible in the `Navbar`:
     * Go to `Administration` > `User Interface`.
     * Under `Navbar` > `Tab List`, add the entities `Affected Household`, `Accommodation`, `Match`, `Accommodation adequacy`, `Monitoring`, `Message templates`, `Messages`, `Cash distributions`, `Transfers` and `Banks`.
-4. For every file in the [import](/import) folder, import it in EspoCRM:
+6. For every file in the [import](/import) folder, import it in EspoCRM:
     * Go to `Administration` > `Import`.
     * Under `What to Import?` > `Entity Type`, select the entity corresponding to the file name; e.g. if the file name is `Roles.csv`, select `Roles`.
     * Click `Next`.
     * Click `Run Import`.
-5. Add the following relationships:
-    * XX
+  
+### Optional steps for installation, adding more functionalities
+7. Proper set up of relationships between Shelter and PAM
+    * With importing the Shelter extension, relationships to the Person Affected from the PAM extension are set up for the following entities: Affected Household, Accommodation and Message. The relationships are functioning, but is not set up completely properly; in a "normal" relationship within EspoCRM, it is also set up from the Person Affected side. For example, to be able to show the Affected Household, Accommodations and Messages as links in the Person Affected, the relationship also needs to be set up from the Person Affected side. This can be done as follows:
+      * Navigate to the following location (eg. by SSH in the VM): `/var/www/espocrm/data/espocrm/custom/Espo/Modules/Custom/Resources/metadata/entityDefs`
+      * Open the `CPersonAffected.json` file, with editing rights - eg: `sudo nano CPersonAffected.json`
+      * Navigate to `fields` and add:
+         ```
+            "cAffectedHousehold": {
+               "type": "linkOne"
+            },
+            "cAccommodations": {
+               "type": "linkMultiple"
+            },
+            "cMessages": {
+               "type": "linkMultiple"
+            }
+         ```
+      * Navigate to `links` and add:
+         ```
+            "cAffectedHousehold": {
+               "type": "hasOne",
+               "foreign": "cPersonAffected",
+               "entity": "AffectedHousehold"
+            },
+            "cAccommodations": {
+               "type": "hasMany",
+               "foreign": "cPersonAffected",
+               "entity": "Accommodation"
+            },
+            "cMessages": {
+               "type": "hasMany",
+               "foreign": "cPersonAffected",
+               "entity": "Message"
+            }
+         ```
+      * Save the file - eg: `CTRL + O`, `Enter`, `CTRL + X`
+      * Rebuild - eg: Go to Administration in the UI > Rebuild
+      * The labels of these relationships are set to the internal names, this can be updated in the entity of the Person Affected > Fields and updating the label in the field of the link.
+      * Add the links to the shelter entities in layout of the Person Affected of PAM where needed.
+8. Sending of messages
+    * In order to send messages, it is necessary to update the two flowcharts with Target Entity Type "Message". It has been set up with an integration to Twilio, so then a Twilio account is needed. For the flowcharts to work, the following needs to be done:
+      * Add the Account ID in the two flowcharts: Open the flowcharts one by one, click on the task box and edit the part `$accountID = 'YOUR_ACCOUNT_ID';`, where `YOUR_ACCOUNT_ID` should be updated with the account ID of the Twilio account used.
+      * Add the Authentication Key in the App Secrets: Go to Administration > App Secrets > Create Secret > The Name should be `authenticationKeyTwilio`, and the Value is the authentication key of the Twilio account used.
+9. Translation of comment boxes
+    * There are two flowcharts to translate the comment boxes in the Affected Household and Accommodation entities. In order to make this work:
+      * Add the URL in the two flowcharts that takes care of the translation of the comment box: Open the flocwcharts one by one, click on the task box and edit the part `ADD_URL`, where `ADD_URL` is the endpoint that takes care of the translation of the comment box.
 
 > [!WARNING]  
 > If you already have records with the same names, the import will overwrite them.
