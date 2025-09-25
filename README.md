@@ -77,11 +77,11 @@ Shelter template consists of _Entities_, _Roles_, _Reports_ and _Flowcharts_.
     * XX
 6. Sending of messages
     * In order to send messages, it is necessary to update the two flowcharts with Target Entity Type "Message". It has been set up with an integration to Twilio, so then a Twilio account is needed. For the flowcharts to work, the following needs to be done:
-      * Add the Account ID in the two flowcharts: Open the flowchart one by one, clock on the task box and edit the part `$accountID = 'YOUR_ACCOUNT_ID';`, where `YOUR_ACCOUNT_ID` should be updated with the account ID of the Twilio account used.
+      * Add the Account ID in the two flowcharts: Open the flowcharts one by one, click on the task box and edit the part `$accountID = 'YOUR_ACCOUNT_ID';`, where `YOUR_ACCOUNT_ID` should be updated with the account ID of the Twilio account used.
       * Add the Authentication Key in the App Secrets: Go to Administration > App Secrets > Create Secret > The Name should be `authenticationKeyTwilio`, and the Value is the authentication key of the Twilio account used.
 7. Translation of comment boxes
     * There are two flowcharts to translate the comment boxes in the Affected Household and Accommodation entities. In order to make this work:
-      * Add the URL in the two flowcharts that takes care of the translation of the comment box. 
+      * Add the URL in the two flowcharts that takes care of the translation of the comment box: Open the flocwcharts one by one, click on the task box and edit the part `ADD_URL`, where `ADD_URL` is the endpoint that takes care of the translation of the comment box.
 
 > [!WARNING]  
 > If you already have records with the same names, the import will overwrite them.
