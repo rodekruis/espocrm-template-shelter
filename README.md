@@ -83,17 +83,13 @@ Shelter template consists of _Entities_, _Roles_, _Reports_ and _Flowcharts_.
             }
          ```
       * Navigate to `links` and add:
-
-
-```
-    "cAffectedHousehold": {
-         "type": "hasOne",
-         "foreign": "cPersonAffected",
-         "entity": "AffectedHousehold"
-     }
-```
-
-
+         ```
+             "cAffectedHousehold": {
+                  "type": "hasOne",
+                  "foreign": "cPersonAffected",
+                  "entity": "AffectedHousehold"
+              }
+         ```
       * Save the file - eg: `CTRL + O`, `Enter`, `CTRL + X`
       * Rebuild - eg: Go to Administration in the UI > Rebuild
 8. Sending of messages
