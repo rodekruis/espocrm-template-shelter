@@ -48,6 +48,8 @@ Shelter template consists of _Entities_, _Roles_, _Reports_ and _Flowcharts_.
 > [!IMPORTANT]  
 > Make sure to back up your EspoCRM instance before installing this extension.
 
+> In order to make use of the full functionalities of this extension (automatic processes with flowcharts and reports), the [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) of EspoCRM is needed.
+
 1. If not done already, [install EspoCRM](https://docs.espocrm.com/administration/installation/).
 2. Install [PAM](https://github.com/rodekruis/espocrm-template-pam/tree/main)
 3. Download the .zip file with the extension: [extension.zip](https://github.com/rodekruis/espocrm-template-shelter/raw/refs/heads/main/extension.zip).
